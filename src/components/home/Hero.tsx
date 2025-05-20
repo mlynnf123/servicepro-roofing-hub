@@ -11,9 +11,9 @@ const Hero = () => {
           <div className="md:w-1/2 md:pr-8 mb-10 md:mb-0">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/f6f99c05-63e1-4743-a6e2-fb0bd68fae3b.png" 
+                src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" 
                 alt="ServicePro Logo" 
-                className="h-24 w-auto mr-3" 
+                className="h-32 w-auto mr-4" 
               />
               <h1 className="hero-text">
                 The Ultimate CRM for Roofing Contractors

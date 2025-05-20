@@ -18,9 +18,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/f6f99c05-63e1-4743-a6e2-fb0bd68fae3b.png" 
+                src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" 
                 alt="ServicePro Logo" 
-                className="h-12 w-auto" 
+                className="h-16 w-auto" 
               />
               <span className="ml-2 text-2xl font-bold text-servicepro-navy">
                 ServicePro
