@@ -2,6 +2,24 @@
 import Layout from "@/components/layout/Layout";
 import PricingCard from "@/components/pricing/PricingCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+
+// Define plan IDs - in production these would come from your Stripe account
+const PLAN_IDS = {
+  basic: {
+    monthly: "price_basic_monthly", 
+    annual: "price_basic_annual",
+  },
+  professional: {
+    monthly: "price_professional_monthly",
+    annual: "price_professional_annual",
+  },
+  enterprise: {
+    monthly: "price_enterprise_monthly",
+    annual: "price_enterprise_annual",
+  }
+};
 
 const basicFeatures = [
   { title: "Up to 3 user accounts", included: true },
@@ -55,10 +73,28 @@ const enterpriseFeatures = [
 ];
 
 const PricingPage = () => {
+  const [billingInterval, setBillingInterval] = useState<'monthly' | 'annual'>('monthly');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is authenticated
+    const checkAuth = async () => {
+      const { data } = await supabase.auth.getSession();
+      setIsAuthenticated(!!data.session);
+    };
+    
+    checkAuth();
+  }, []);
+
   return (
     <Layout>
       <div className="bg-gradient-to-br from-servicepro-navy to-servicepro-navy/90 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <img 
+            src="/lovable-uploads/2bb46138-160f-4952-87a6-be2eabf7d0d3.png" 
+            alt="ServicePro Logo" 
+            className="h-16 mx-auto mb-6"
+          />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Simple, Transparent Pricing
           </h1>
@@ -70,7 +106,11 @@ const PricingPage = () => {
 
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="monthly" className="w-full">
+          <Tabs 
+            defaultValue="monthly" 
+            className="w-full"
+            onValueChange={(value) => setBillingInterval(value as 'monthly' | 'annual')}
+          >
             <div className="text-center mb-8">
               <TabsList>
                 <TabsTrigger value="monthly">Monthly</TabsTrigger>
@@ -86,6 +126,8 @@ const PricingPage = () => {
                   description="Perfect for small contractors just getting started with CRM."
                   features={basicFeatures}
                   buttonVariant="outline"
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.basic.monthly}
                 />
                 <PricingCard
                   title="Professional"
@@ -94,12 +136,16 @@ const PricingPage = () => {
                   features={professionalFeatures}
                   isPopular={true}
                   buttonVariant="secondary"
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.professional.monthly}
                 />
                 <PricingCard
                   title="Enterprise"
                   price={75}
                   description="For established businesses with multiple teams and complex needs."
                   features={enterpriseFeatures}
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.enterprise.monthly}
                 />
               </div>
             </TabsContent>
@@ -112,6 +158,8 @@ const PricingPage = () => {
                   description="Perfect for small contractors just getting started with CRM."
                   features={basicFeatures}
                   buttonVariant="outline"
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.basic.annual}
                 />
                 <PricingCard
                   title="Professional"
@@ -120,12 +168,16 @@ const PricingPage = () => {
                   features={professionalFeatures}
                   isPopular={true}
                   buttonVariant="secondary"
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.professional.annual}
                 />
                 <PricingCard
                   title="Enterprise"
                   price={60}
                   description="For established businesses with multiple teams and complex needs."
                   features={enterpriseFeatures}
+                  buttonText={isAuthenticated ? "Subscribe Now" : "Start Free Trial"}
+                  planId={PLAN_IDS.enterprise.annual}
                 />
               </div>
             </TabsContent>
