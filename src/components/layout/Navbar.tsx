@@ -17,9 +17,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <div className="h-8 w-8 bg-servicepro-navy rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
+              <img 
+                src="/lovable-uploads/f6f99c05-63e1-4743-a6e2-fb0bd68fae3b.png" 
+                alt="ServicePro Logo" 
+                className="h-8 w-auto" 
+              />
               <span className="ml-2 text-xl font-bold text-servicepro-navy">
                 ServicePro
               </span>
