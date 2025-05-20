@@ -20,9 +20,9 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/f6f99c05-63e1-4743-a6e2-fb0bd68fae3b.png" 
                 alt="ServicePro Logo" 
-                className="h-8 w-auto" 
+                className="h-12 w-auto" 
               />
-              <span className="ml-2 text-xl font-bold text-servicepro-navy">
+              <span className="ml-2 text-2xl font-bold text-servicepro-navy">
                 ServicePro
               </span>
             </Link>

@@ -8,9 +8,16 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-8 mb-10 md:mb-0">
-            <h1 className="hero-text mb-6">
-              The Ultimate CRM for Roofing Contractors
-            </h1>
+            <div className="flex items-center mb-6">
+              <img 
+                src="/lovable-uploads/f6f99c05-63e1-4743-a6e2-fb0bd68fae3b.png" 
+                alt="ServicePro Logo" 
+                className="h-16 w-auto mr-3" 
+              />
+              <h1 className="hero-text">
+                The Ultimate CRM for Roofing Contractors
+              </h1>
+            </div>
             <p className="text-xl mb-8 text-gray-200">
               Streamline your workflow, organize client information, and grow your roofing business with ServicePro's purpose-built CRM solution.
             </p>
