@@ -100,7 +100,7 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-medium;
     text-rendering: optimizeLegibility;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
   }
 
   p {
@@ -113,13 +113,13 @@
   .hero-text {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold;
     text-rendering: optimizeLegibility;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
   }
   
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-6;
     text-rendering: optimizeLegibility;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
   }
   
   .card-hover {
