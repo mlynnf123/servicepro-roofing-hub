@@ -93,31 +93,44 @@
     @apply bg-background text-foreground font-sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-medium;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
 }
 
 @layer components {
   .hero-text {
-    @apply text-4xl md:text-5xl lg:text-6xl font-medium;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.025em;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-medium mb-6;
+    @apply text-3xl md:text-4xl font-bold mb-6;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.025em;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-500 ease-out hover:shadow-2xl hover:-translate-y-2;
   }
   
   .btn-primary {
-    @apply bg-servicepro-navy text-white hover:bg-servicepro-navy/90 px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply bg-servicepro-navy text-white hover:bg-servicepro-navy/90 px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply bg-servicepro-orange text-white hover:bg-servicepro-orange/90 px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply bg-servicepro-orange text-white hover:bg-servicepro-orange/90 px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
 }
