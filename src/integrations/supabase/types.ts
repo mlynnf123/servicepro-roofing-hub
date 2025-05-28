@@ -50,6 +50,107 @@ export type Database = {
           },
         ]
       }
+      campaign_recipients: {
+        Row: {
+          campaign_id: string | null
+          created_at: string | null
+          id: string
+          lead_id: string | null
+          status: Database["public"]["Enums"]["recipient_status"]
+          updated_at: string | null
+        }
+        Insert: {
+          campaign_id?: string | null
+          created_at?: string | null
+          id?: string
+          lead_id?: string | null
+          status?: Database["public"]["Enums"]["recipient_status"]
+          updated_at?: string | null
+        }
+        Update: {
+          campaign_id?: string | null
+          created_at?: string | null
+          id?: string
+          lead_id?: string | null
+          status?: Database["public"]["Enums"]["recipient_status"]
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "campaign_recipients_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: false
+            referencedRelation: "campaigns"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "campaign_recipients_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      campaigns: {
+        Row: {
+          click_rate: number | null
+          content: string | null
+          created_at: string | null
+          id: string
+          name: string
+          open_rate: number | null
+          organization_id: string | null
+          recipients: number | null
+          scheduled_for: string | null
+          sent_at: string | null
+          status: Database["public"]["Enums"]["campaign_status"]
+          subject: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          click_rate?: number | null
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          name: string
+          open_rate?: number | null
+          organization_id?: string | null
+          recipients?: number | null
+          scheduled_for?: string | null
+          sent_at?: string | null
+          status?: Database["public"]["Enums"]["campaign_status"]
+          subject: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          click_rate?: number | null
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          name?: string
+          open_rate?: number | null
+          organization_id?: string | null
+          recipients?: number | null
+          scheduled_for?: string | null
+          sent_at?: string | null
+          status?: Database["public"]["Enums"]["campaign_status"]
+          subject?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "campaigns_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       change_orders: {
         Row: {
           created_at: string | null
@@ -625,6 +726,66 @@ export type Database = {
           },
         ]
       }
+      suppliers: {
+        Row: {
+          api_endpoint: string | null
+          api_key: string | null
+          created_at: string | null
+          id: string
+          name: string
+          updated_at: string | null
+        }
+        Insert: {
+          api_endpoint?: string | null
+          api_key?: string | null
+          created_at?: string | null
+          id?: string
+          name: string
+          updated_at?: string | null
+        }
+        Update: {
+          api_endpoint?: string | null
+          api_key?: string | null
+          created_at?: string | null
+          id?: string
+          name?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      user_calendar_tokens: {
+        Row: {
+          access_token: string
+          created_at: string | null
+          expires_at: string | null
+          id: string
+          provider: string
+          refresh_token: string | null
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          access_token: string
+          created_at?: string | null
+          expires_at?: string | null
+          id?: string
+          provider: string
+          refresh_token?: string | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          access_token?: string
+          created_at?: string | null
+          expires_at?: string | null
+          id?: string
+          provider?: string
+          refresh_token?: string | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -669,7 +830,14 @@ export type Database = {
       }
     }
     Enums: {
-      [_ in never]: never
+      campaign_status: "draft" | "scheduled" | "sending" | "sent" | "failed"
+      recipient_status:
+        | "pending"
+        | "sent"
+        | "failed"
+        | "opened"
+        | "clicked"
+        | "unsubscribed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -784,6 +952,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      campaign_status: ["draft", "scheduled", "sending", "sent", "failed"],
+      recipient_status: [
+        "pending",
+        "sent",
+        "failed",
+        "opened",
+        "clicked",
+        "unsubscribed",
+      ],
+    },
   },
 } as const
