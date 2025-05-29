@@ -93,7 +93,7 @@ const PricingPage = () => {
           <img 
             src="/lovable-uploads/2bb46138-160f-4952-87a6-be2eabf7d0d3.png" 
             alt="ServicePro Logo" 
-            className="h-16 mx-auto mb-6"
+            className="h-24 mx-auto mb-6"
           />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Simple, Transparent Pricing
