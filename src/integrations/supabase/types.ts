@@ -50,6 +50,56 @@ export type Database = {
           },
         ]
       }
+      api_usage_logs: {
+        Row: {
+          cost_cents: number | null
+          created_at: string | null
+          endpoint: string | null
+          error_message: string | null
+          id: string
+          organization_id: string
+          processing_time_ms: number | null
+          provider: string
+          request_data: Json | null
+          response_data: Json | null
+          success: boolean | null
+        }
+        Insert: {
+          cost_cents?: number | null
+          created_at?: string | null
+          endpoint?: string | null
+          error_message?: string | null
+          id?: string
+          organization_id: string
+          processing_time_ms?: number | null
+          provider: string
+          request_data?: Json | null
+          response_data?: Json | null
+          success?: boolean | null
+        }
+        Update: {
+          cost_cents?: number | null
+          created_at?: string | null
+          endpoint?: string | null
+          error_message?: string | null
+          id?: string
+          organization_id?: string
+          processing_time_ms?: number | null
+          provider?: string
+          request_data?: Json | null
+          response_data?: Json | null
+          success?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_usage_logs_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       campaign_recipients: {
         Row: {
           campaign_id: string | null
@@ -240,6 +290,65 @@ export type Database = {
           },
           {
             foreignKeyName: "contracts_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      customer_roof_profiles: {
+        Row: {
+          address: string
+          architectural_style: string | null
+          created_at: string | null
+          current_material: string | null
+          customer_id: string
+          id: string
+          installation_date: string | null
+          notes: string | null
+          organization_id: string
+          roof_pitch: string | null
+          roof_type: string | null
+          square_footage: number | null
+          story_count: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          address: string
+          architectural_style?: string | null
+          created_at?: string | null
+          current_material?: string | null
+          customer_id: string
+          id?: string
+          installation_date?: string | null
+          notes?: string | null
+          organization_id: string
+          roof_pitch?: string | null
+          roof_type?: string | null
+          square_footage?: number | null
+          story_count?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          address?: string
+          architectural_style?: string | null
+          created_at?: string | null
+          current_material?: string | null
+          customer_id?: string
+          id?: string
+          installation_date?: string | null
+          notes?: string | null
+          organization_id?: string
+          roof_pitch?: string | null
+          roof_type?: string | null
+          square_footage?: number | null
+          story_count?: number | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "customer_roof_profiles_organization_id_fkey"
             columns: ["organization_id"]
             isOneToOne: false
             referencedRelation: "organizations"
@@ -510,6 +619,44 @@ export type Database = {
           },
         ]
       }
+      material_categories: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          id: string
+          is_active: boolean | null
+          name: string
+          organization_id: string
+          sort_order: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          is_active?: boolean | null
+          name: string
+          organization_id: string
+          sort_order?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          is_active?: boolean | null
+          name?: string
+          organization_id?: string
+          sort_order?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "material_categories_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       notifications: {
         Row: {
           created_at: string | null
@@ -726,6 +873,145 @@ export type Database = {
           },
         ]
       }
+      roof_visualizations: {
+        Row: {
+          created_at: string | null
+          created_by: string | null
+          customer_access_token: string | null
+          customer_feedback: Json | null
+          customer_id: string | null
+          estimated_cost: number | null
+          id: string
+          material_quantities: Json | null
+          organization_id: string
+          original_image_url: string
+          processing_notes: string | null
+          project_id: string | null
+          provider_job_id: string | null
+          roof_measurements: Json | null
+          roof_segments: Json | null
+          selected_materials: Json
+          status: string | null
+          updated_at: string | null
+          viewed_by_customer_at: string | null
+          visualized_image_url: string | null
+          visualizer_provider: string
+        }
+        Insert: {
+          created_at?: string | null
+          created_by?: string | null
+          customer_access_token?: string | null
+          customer_feedback?: Json | null
+          customer_id?: string | null
+          estimated_cost?: number | null
+          id?: string
+          material_quantities?: Json | null
+          organization_id: string
+          original_image_url: string
+          processing_notes?: string | null
+          project_id?: string | null
+          provider_job_id?: string | null
+          roof_measurements?: Json | null
+          roof_segments?: Json | null
+          selected_materials: Json
+          status?: string | null
+          updated_at?: string | null
+          viewed_by_customer_at?: string | null
+          visualized_image_url?: string | null
+          visualizer_provider: string
+        }
+        Update: {
+          created_at?: string | null
+          created_by?: string | null
+          customer_access_token?: string | null
+          customer_feedback?: Json | null
+          customer_id?: string | null
+          estimated_cost?: number | null
+          id?: string
+          material_quantities?: Json | null
+          organization_id?: string
+          original_image_url?: string
+          processing_notes?: string | null
+          project_id?: string | null
+          provider_job_id?: string | null
+          roof_measurements?: Json | null
+          roof_segments?: Json | null
+          selected_materials?: Json
+          status?: string | null
+          updated_at?: string | null
+          viewed_by_customer_at?: string | null
+          visualized_image_url?: string | null
+          visualizer_provider?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "roof_visualizations_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      shingle_materials: {
+        Row: {
+          color_code: string | null
+          color_name: string
+          created_at: string | null
+          id: string
+          is_active: boolean | null
+          manufacturer: string
+          material_type: string | null
+          organization_id: string
+          price_per_square: number | null
+          product_line: string
+          product_name: string
+          texture_url: string | null
+          updated_at: string | null
+          warranty_years: number | null
+        }
+        Insert: {
+          color_code?: string | null
+          color_name: string
+          created_at?: string | null
+          id?: string
+          is_active?: boolean | null
+          manufacturer: string
+          material_type?: string | null
+          organization_id: string
+          price_per_square?: number | null
+          product_line: string
+          product_name: string
+          texture_url?: string | null
+          updated_at?: string | null
+          warranty_years?: number | null
+        }
+        Update: {
+          color_code?: string | null
+          color_name?: string
+          created_at?: string | null
+          id?: string
+          is_active?: boolean | null
+          manufacturer?: string
+          material_type?: string | null
+          organization_id?: string
+          price_per_square?: number | null
+          product_line?: string
+          product_name?: string
+          texture_url?: string | null
+          updated_at?: string | null
+          warranty_years?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "shingle_materials_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       suppliers: {
         Row: {
           api_endpoint: string | null
@@ -786,11 +1072,56 @@ export type Database = {
         }
         Relationships: []
       }
+      visualization_comparisons: {
+        Row: {
+          created_at: string | null
+          created_by: string | null
+          customer_id: string
+          id: string
+          name: string
+          notes: string | null
+          organization_id: string
+          visualization_ids: string[]
+        }
+        Insert: {
+          created_at?: string | null
+          created_by?: string | null
+          customer_id: string
+          id?: string
+          name: string
+          notes?: string | null
+          organization_id: string
+          visualization_ids: string[]
+        }
+        Update: {
+          created_at?: string | null
+          created_by?: string | null
+          customer_id?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          organization_id?: string
+          visualization_ids?: string[]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "visualization_comparisons_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      add_default_roof_materials: {
+        Args: { org_id: string }
+        Returns: undefined
+      }
       get_lead_sources_count: {
         Args: { filter_start_date: string; filter_end_date: string }
         Returns: {
@@ -803,6 +1134,17 @@ export type Database = {
         Returns: {
           type: string
           count: number
+        }[]
+      }
+      get_visualization_by_token: {
+        Args: { access_token: string }
+        Returns: {
+          id: string
+          original_image_url: string
+          visualized_image_url: string
+          selected_materials: Json
+          status: string
+          created_at: string
         }[]
       }
       handle_photo_upload: {
@@ -827,6 +1169,10 @@ export type Database = {
           type: string | null
           url: string
         }
+      }
+      update_customer_feedback: {
+        Args: { access_token: string; feedback_data: Json }
+        Returns: boolean
       }
     }
     Enums: {
