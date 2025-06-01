@@ -402,6 +402,7 @@ export type Database = {
       }
       estimates: {
         Row: {
+          attachments: Json | null
           created_at: string | null
           customer_info: Json
           id: string
@@ -415,6 +416,7 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
+          attachments?: Json | null
           created_at?: string | null
           customer_info: Json
           id?: string
@@ -428,6 +430,7 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
+          attachments?: Json | null
           created_at?: string | null
           customer_info?: Json
           id?: string
@@ -609,15 +612,7 @@ export type Database = {
           updated_at?: string | null
           user_id?: string | null
         }
-        Relationships: [
-          {
-            foreignKeyName: "leads_organization_id_fkey"
-            columns: ["organization_id"]
-            isOneToOne: false
-            referencedRelation: "organizations"
-            referencedColumns: ["id"]
-          },
-        ]
+        Relationships: []
       }
       material_categories: {
         Row: {

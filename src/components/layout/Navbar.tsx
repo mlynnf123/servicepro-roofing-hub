@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link to="/pricing" className="text-gray-700 hover:text-servicepro-navy px-3 py-2 font-medium">
               Pricing
             </Link>
-            <Button asChild variant="ghost">
+            <Button asChild className="bg-servicepro-navy hover:bg-servicepro-navy/90 text-white">
               <Link to="/login">Login</Link>
             </Button>
             <Button asChild className="bg-servicepro-orange hover:bg-servicepro-orange/90">
@@ -87,7 +87,7 @@ const Navbar = () => {
             <div className="pt-4 pb-3 border-t border-gray-200">
               <Link
                 to="/login"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-servicepro-navy"
+                className="block px-3 py-2 text-base font-medium bg-servicepro-navy text-white rounded-md mb-2"
                 onClick={() => setIsOpen(false)}
               >
                 Login
