@@ -1,20 +1,13 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import DashboardPreview from "./DashboardPreview";
-
 const Hero = () => {
-  return (
-    <section className="bg-gradient-to-br from-servicepro-navy to-servicepro-navy/90 text-white py-24">
+  return <section className="bg-gradient-to-br from-servicepro-navy to-servicepro-navy/90 text-white py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-8 mb-10 md:mb-0">
             <div className="flex items-center mb-6">
-              <img 
-                src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" 
-                alt="ServicePro Logo" 
-                className="h-32 w-auto mr-4" 
-              />
+              <img src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" alt="ServicePro Logo" className="h-32 w-auto mr-4" />
               <h1 className="hero-text">
                 The Ultimate CRM for Roofing Contractors
               </h1>
@@ -23,19 +16,10 @@ const Hero = () => {
               Streamline your workflow, organize client information, and grow your roofing business with ServicePro's purpose-built CRM solution.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                size="lg" 
-                className="bg-servicepro-orange hover:bg-servicepro-orange/90 text-lg"
-                asChild
-              >
-                <Link to="/signup">Start 5-Day Free Trial</Link>
+              <Button size="lg" className="bg-servicepro-orange hover:bg-servicepro-orange/90 text-lg" asChild>
+                <Link to="/signup">Start Free Trial</Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-servicepro-navy hover:bg-gray-100 text-lg border-0"
-                asChild
-              >
+              <Button size="lg" variant="secondary" className="bg-white text-servicepro-navy hover:bg-gray-100 text-lg border-0" asChild>
                 <Link to="/features">Learn More</Link>
               </Button>
             </div>
@@ -51,8 +35,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
