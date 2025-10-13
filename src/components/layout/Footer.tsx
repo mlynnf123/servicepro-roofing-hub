@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Icons } from "@/components/ui/icons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center">
-              <Icons.logo className="h-8 w-8 text-white" />
+              <img src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" alt="ServicePro Logo" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-light text-white">
                 ServicePro
               </span>
