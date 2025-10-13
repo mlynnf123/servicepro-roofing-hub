@@ -39,12 +39,19 @@ export function HeroSection({
   return (
     <section
       className={cn(
-        "bg-background text-foreground",
+        "relative bg-background text-foreground",
         "py-12 sm:py-24 md:py-32 px-4",
         "overflow-hidden pb-0"
       )}
     >
-      <div className="mx-auto flex max-w-7xl flex-col gap-12 pt-16 sm:gap-24">
+      {/* Radial Gradient Orbs Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand/30 rounded-full blur-3xl opacity-50 animate-pulse" />
+        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-brand-foreground/30 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-0 left-1/3 w-[450px] h-[450px] bg-primary/20 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
+      </div>
+      
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           {/* Badge */}
           {badge && (
