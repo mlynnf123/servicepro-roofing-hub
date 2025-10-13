@@ -30,10 +30,10 @@ const Navbar = () => {
             <Link to="/pricing" className="text-gray-700 hover:text-servicepro-navy px-3 py-2 font-medium">
               Pricing
             </Link>
-            <Button asChild className="bg-servicepro-navy hover:bg-servicepro-navy/90 text-white">
+            <Button asChild className="bg-gradient-to-br from-servicepro-navy to-servicepro-navy/80 hover:from-servicepro-navy/90 hover:to-servicepro-navy/70 text-white shadow-[0_10px_40px_-10px_hsl(217_33%_17%_/_0.3)] hover:shadow-[0_20px_50px_-10px_hsl(217_33%_17%_/_0.4)] transition-all duration-300">
               <Link to="/login">Login</Link>
             </Button>
-            <Button asChild className="bg-servicepro-orange hover:bg-servicepro-orange/90">
+            <Button asChild className="bg-gradient-to-br from-servicepro-orange to-servicepro-orange/80 hover:from-servicepro-orange/90 hover:to-servicepro-orange/70 shadow-[0_10px_40px_-10px_hsl(22_96%_54%_/_0.4)] hover:shadow-[0_20px_50px_-10px_hsl(22_96%_54%_/_0.5)] transition-all duration-300">
               <Link to="/signup">Start Free Trial</Link>
             </Button>
           </div>
