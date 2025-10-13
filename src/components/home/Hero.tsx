@@ -16,7 +16,7 @@ const Hero = () => {
         {/* Centered Hero Content */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="flex items-center justify-center mb-6">
-            <img src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" alt="ServicePro Logo" className="h-24 w-auto" />
+            <img src="/lovable-uploads/2d51061f-f70a-4605-b865-b6778243a2cf.png" alt="ServicePro Logo" className="h-36 w-auto" />
           </div>
           <h1 className="hero-text font-brand font-light mb-6">
             The Ultimate CRM for Roofing Contractors
