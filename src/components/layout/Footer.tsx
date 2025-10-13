@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Icons } from "@/components/ui/icons";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-servicepro-navy text-white">
@@ -6,9 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center">
-              <div className="h-8 w-8 bg-white rounded-md flex items-center justify-center">
-                <span className="text-servicepro-navy font-bold text-xl">S</span>
-              </div>
+              <Icons.logo className="h-8 w-8 text-white" />
               <span className="ml-2 text-xl font-light text-white">
                 ServicePro
               </span>
