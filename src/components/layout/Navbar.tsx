@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 lg:px-8 mx-0 sm:px-[9px]">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
