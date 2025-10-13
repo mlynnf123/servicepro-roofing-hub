@@ -91,7 +91,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            &copy; {currentYear} ServicePro. All rights reserved.
+            &copy; {currentYear} IM Marketing, LLC. All rights reserved.
           </p>
           
         </div>
