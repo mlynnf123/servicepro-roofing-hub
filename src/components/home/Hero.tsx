@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button";
 import AnimatedProductShowcase from "./AnimatedProductShowcase";
 import MouseGradient from "./MouseGradient";
 const Hero = () => {
-  return <section className="relative bg-primary text-white py-24 overflow-hidden" style={{
-    background: 'var(--gradient-primary)'
-  }}>
+  return <section className="relative bg-background text-foreground py-24 overflow-hidden">
+      {/* Radial Gradient Orbs Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand/30 rounded-full blur-3xl opacity-50 animate-pulse" />
+        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-brand-foreground/30 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-0 left-1/3 w-[450px] h-[450px] bg-primary/20 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
+      </div>
+      
       <MouseGradient />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Centered Hero Content */}
