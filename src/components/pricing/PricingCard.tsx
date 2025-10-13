@@ -97,7 +97,7 @@ const PricingCard = ({
             <li key={index} className="flex items-start">
               <div className="flex-shrink-0">
                 {feature.included ? (
-                  <Check className="h-5 w-5 text-green-500" />
+                  <Check className="h-5 w-5 text-servicepro-orange" />
                 ) : (
                   <div className="h-5 w-5 rounded-full border border-gray-200" />
                 )}

@@ -27,11 +27,6 @@ const BentoGrid = () => {
                   Track leads from first contact to project completion. Automated follow-ups, lead scoring, and conversion tracking help you close more deals.
                 </p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-inner">
-                <div className="text-sm text-gray-300 mb-2 font-medium">This Month</div>
-                <div className="text-4xl font-bold mb-1">247 leads</div>
-                <div className="text-sm text-green-400 font-medium">+23% from last month</div>
-              </div>
             </div>
           </div>
 
@@ -63,19 +58,9 @@ const BentoGrid = () => {
               <Send className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-2xl font-light mb-4">Automated Communication</h3>
-            <p className="text-orange-100 mb-6 text-lg leading-relaxed">
+            <p className="text-orange-100 text-lg leading-relaxed">
               Send personalized follow-ups, appointment reminders, and project updates automatically.
             </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-white rounded-full mr-3 shadow-sm"></div>
-                <span className="font-medium">Email campaigns</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-white rounded-full mr-3 shadow-sm"></div>
-                <span className="font-medium">SMS notifications</span>
-              </div>
-            </div>
           </div>
 
           {/* Phone integration */}
@@ -106,29 +91,11 @@ const BentoGrid = () => {
               <div className="bg-servicepro-orange/10 p-3 rounded-2xl shadow-md border border-servicepro-orange/20">
                 <PieChart className="h-6 w-6 text-servicepro-orange" />
               </div>
-              <div className="text-right">
-                <div className="text-3xl font-bold text-servicepro-navy">$127k</div>
-                <div className="text-sm text-gray-500 font-medium">Revenue this quarter</div>
-              </div>
             </div>
             <h3 className="text-xl font-light mb-3 text-servicepro-navy">Performance Analytics</h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               Track your business metrics with detailed reports and insights.
             </p>
-            <div className="grid grid-cols-3 gap-6 text-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-servicepro-navy mb-1">94%</div>
-                <div className="text-gray-500 font-medium">Lead response rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-servicepro-navy mb-1">67%</div>
-                <div className="text-gray-500 font-medium">Conversion rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-servicepro-navy mb-1">4.8★</div>
-                <div className="text-gray-500 font-medium">Customer rating</div>
-              </div>
-            </div>
           </div>
 
           {/* Revenue tracking */}

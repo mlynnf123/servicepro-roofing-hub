@@ -15,7 +15,7 @@ const features = [
     title: "Document Management",
     description: "Store, organize, and quickly access estimates, contracts, inspection forms, and other critical documents in one central location.",
     icon: FileText,
-    color: "bg-green-100 text-green-600",
+    color: "bg-servicepro-orange/10 text-servicepro-orange",
   },
   {
     title: "Job Scheduling",
