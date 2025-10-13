@@ -1,36 +1,66 @@
 
-import { FileText, Users, Calendar, PieChart, Send, BarChart } from "lucide-react";
+import { FileText, Users, Calendar, PieChart, Send, BarChart, Workflow, Package, MessageSquare, Settings, Star, DollarSign } from "lucide-react";
 
 const features = [
   {
-    title: "Lead Management",
-    description: "Organize and track potential clients from first contact to close",
-    icon: Users,
-  },
-  {
-    title: "Document Management",
-    description: "Store and access estimates, contracts and inspection forms",
-    icon: FileText,
-  },
-  {
-    title: "Job Scheduling",
-    description: "Easily schedule and manage appointments and project timelines",
-    icon: Calendar,
-  },
-  {
-    title: "Sales Pipeline",
-    description: "Track deals through your sales process with visual pipeline",
+    title: "Dashboard & Analytics",
+    description: "Real-time business intelligence with key metrics including revenue, leads, conversion rates, and project performance. Make data-driven decisions with visual charts and actionable insights.",
     icon: BarChart,
   },
   {
-    title: "Client Communication",
-    description: "Send personalized emails and follow-ups automatically",
-    icon: Send,
+    title: "Lead Management",
+    description: "Capture, track, and convert leads with a visual pipeline board. Monitor lead sources, manage follow-ups, and never miss an opportunity.",
+    icon: Users,
   },
   {
-    title: "Performance Reports",
-    description: "Track business metrics and team performance with custom reports",
-    icon: PieChart,
+    title: "Project Management",
+    description: "Manage roofing projects from start to finish. Track active jobs, access completed project history, and use templates to standardize workflows.",
+    icon: Calendar,
+  },
+  {
+    title: "Job Costing & Profitability",
+    description: "Track labor, materials, and expenses in real-time. Monitor budgets, analyze profit margins, and understand the true cost of every job.",
+    icon: DollarSign,
+  },
+  {
+    title: "Scheduling & Calendar",
+    description: "Coordinate your team with visual scheduling. Manage appointments, track crew availability, and keep everyone on the same page.",
+    icon: Calendar,
+  },
+  {
+    title: "Documents & Paperwork",
+    description: "Create professional estimates, invoices, contracts, and proposals—all in one place. Generate, send, and track all your business documents.",
+    icon: FileText,
+  },
+  {
+    title: "Reviews & Reputation Management",
+    description: "Automate review requests, monitor customer feedback, and respond with templates. Build your online reputation automatically.",
+    icon: Star,
+  },
+  {
+    title: "Workflow Automation",
+    description: "Build custom workflows with a visual drag-and-drop builder. Automate repetitive tasks like follow-ups, notifications, and status updates.",
+    icon: Workflow,
+  },
+  {
+    title: "Product & Service Catalog",
+    description: "Maintain a central catalog of your products, services, and pricing. Use it across estimates, invoices, and proposals for consistency.",
+    icon: Package,
+  },
+  {
+    title: "Messaging Hub",
+    description: "Unified inbox for email and SMS. Send messages, create templates, run campaigns, and keep all customer communications in one place.",
+    icon: MessageSquare,
+  },
+  {
+    title: "Team & Settings",
+    description: "Manage team members, set permissions, configure integrations, handle billing, and customize your company branding—all from one dashboard.",
+    icon: Settings,
+  },
+  {
+    title: "Marketing Campaign Builder",
+    description: "Send personalized emails and follow-ups automatically. Create targeted campaigns to nurture leads and maintain relationships with past customers.",
+    icon: Send,
   },
 ];
 
