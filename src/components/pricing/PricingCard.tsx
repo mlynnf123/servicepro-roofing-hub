@@ -85,7 +85,7 @@ const PricingCard = ({
         </div>
       )}
       <div className="p-6">
-        <h3 className="text-xl font-bold">{title}</h3>
+        <h3 className="text-xl font-light">{title}</h3>
         <div className="mt-4 flex items-baseline text-gray-900">
           <span className="text-4xl font-extrabold tracking-tight">${price}</span>
           <span className="ml-1 text-xl font-semibold">/month</span>

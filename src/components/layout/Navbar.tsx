@@ -22,7 +22,7 @@ const Navbar = () => {
                 alt="ServicePro Logo" 
                 className="h-16 w-auto" 
               />
-              <span className="ml-2 text-2xl font-bold text-servicepro-navy">
+              <span className="ml-2 text-2xl font-light text-servicepro-navy">
                 ServicePro
               </span>
             </Link>

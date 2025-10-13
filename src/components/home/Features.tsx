@@ -54,7 +54,7 @@ const Features = () => {
               <div className="rounded-full bg-servicepro-navy/10 p-3 inline-block mb-4">
                 <feature.icon className="h-6 w-6 text-servicepro-navy" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-light mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}

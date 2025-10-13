@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="h-8 w-8 bg-white rounded-md flex items-center justify-center">
                 <span className="text-servicepro-navy font-bold text-xl">S</span>
               </div>
-              <span className="ml-2 text-xl font-bold text-white">
+              <span className="ml-2 text-xl font-light text-white">
                 ServicePro
               </span>
             </Link>
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <h3 className="font-light text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-white text-sm">
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Product</h3>
+            <h3 className="font-light text-lg mb-4">Product</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/features" className="text-gray-300 hover:text-white text-sm">
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Legal</h3>
+            <h3 className="font-light text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">

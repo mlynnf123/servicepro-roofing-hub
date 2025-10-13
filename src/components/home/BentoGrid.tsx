@@ -6,7 +6,7 @@ const BentoGrid = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-servicepro-navy mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-light text-servicepro-navy mb-6 leading-tight">
             Everything You Need to Scale Your Roofing Business
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -22,7 +22,7 @@ const BentoGrid = () => {
                 <div className="bg-servicepro-orange/20 p-3 rounded-2xl w-fit mb-6 shadow-lg border border-servicepro-orange/30">
                   <Users className="h-8 w-8 text-servicepro-orange" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 leading-tight">Complete Lead Management</h3>
+                <h3 className="text-3xl font-light mb-4 leading-tight">Complete Lead Management</h3>
                 <p className="text-gray-200 mb-8 text-lg leading-relaxed">
                   Track leads from first contact to project completion. Automated follow-ups, lead scoring, and conversion tracking help you close more deals.
                 </p>
@@ -40,7 +40,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <FileText className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Smart Documents</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Smart Documents</h3>
             <p className="text-gray-600 leading-relaxed">
               Generate estimates, contracts, and invoices with just a few clicks.
             </p>
@@ -51,7 +51,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <Calendar className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Smart Scheduling</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Smart Scheduling</h3>
             <p className="text-gray-600 leading-relaxed">
               Optimize routes and manage your team's schedule efficiently.
             </p>
@@ -62,7 +62,7 @@ const BentoGrid = () => {
             <div className="bg-white/20 p-3 rounded-2xl w-fit mb-6 shadow-lg border border-white/30">
               <Send className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4">Automated Communication</h3>
+            <h3 className="text-2xl font-light mb-4">Automated Communication</h3>
             <p className="text-orange-100 mb-6 text-lg leading-relaxed">
               Send personalized follow-ups, appointment reminders, and project updates automatically.
             </p>
@@ -83,7 +83,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <Phone className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Call Tracking</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Call Tracking</h3>
             <p className="text-gray-600 leading-relaxed">
               Record and analyze all customer calls with automatic logging.
             </p>
@@ -94,7 +94,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <Clock className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Time Tracking</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Time Tracking</h3>
             <p className="text-gray-600 leading-relaxed">
               Track job progress and labor costs in real-time.
             </p>
@@ -111,7 +111,7 @@ const BentoGrid = () => {
                 <div className="text-sm text-gray-500 font-medium">Revenue this quarter</div>
               </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Performance Analytics</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Performance Analytics</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Track your business metrics with detailed reports and insights.
             </p>
@@ -136,7 +136,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <DollarSign className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Revenue Tracking</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Revenue Tracking</h3>
             <p className="text-gray-600 leading-relaxed">
               Monitor payments, invoices, and cash flow in real-time.
             </p>
@@ -147,7 +147,7 @@ const BentoGrid = () => {
             <div className="bg-servicepro-orange/10 p-3 rounded-2xl w-fit mb-6 shadow-md border border-servicepro-orange/20">
               <BarChart className="h-6 w-6 text-servicepro-orange" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-servicepro-navy">Sales Pipeline</h3>
+            <h3 className="text-xl font-light mb-3 text-servicepro-navy">Sales Pipeline</h3>
             <p className="text-gray-600 leading-relaxed">
               Visualize and manage your sales process from lead to close.
             </p>

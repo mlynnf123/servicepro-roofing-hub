@@ -118,13 +118,13 @@
 
 @layer components {
   .hero-text {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-4xl md:text-5xl lg:text-6xl font-light;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.3px;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6;
+    @apply text-3xl md:text-4xl font-light mb-6;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.3px;
   }
