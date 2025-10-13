@@ -30,7 +30,7 @@ const Hero = () => {
           }} asChild>
               <Link to="/signup">Start Free Trial</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 text-lg rounded-sm transition-all duration-200" asChild>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg rounded-sm transition-all duration-200" asChild>
               <Link to="/features">Learn More</Link>
             </Button>
           </div>
