@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import DashboardPreview from "./DashboardPreview";
+import AnimatedProductShowcase from "./AnimatedProductShowcase";
 import MouseGradient from "./MouseGradient";
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
         {/* Product Preview */}
         <div className="max-w-6xl mx-auto">
           <div className="bg-white p-1 rounded-sm transition-all duration-300" style={{ boxShadow: 'var(--shadow-elevated)' }}>
-            <DashboardPreview />
+            <AnimatedProductShowcase />
           </div>
         </div>
       </div>
