@@ -1,10 +1,22 @@
 import { Link } from "react-router-dom";
+import { Icons } from "@/components/ui/icons";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-servicepro-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+          <div>
+            <Link to="/" className="flex items-center">
+              <Icons.logo className="h-8 w-8 text-white" />
+              <span className="ml-2 text-xl font-light text-white">
+                ServicePro
+              </span>
+            </Link>
+            <p className="mt-4 text-sm text-gray-300">
+              The ultimate CRM solution for roofing contractors, simplifying customer management and boosting efficiency.
+            </p>
+          </div>
           
           <div>
             <h3 className="font-light text-lg mb-4">Company</h3>
