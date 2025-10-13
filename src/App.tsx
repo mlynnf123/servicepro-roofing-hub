@@ -10,6 +10,7 @@ import SignupPage from "./pages/SignupPage";
 import SignupPageMUI from "./pages/SignupPageMUI";
 import LoginPage from "./pages/LoginPage";
 import LoginPageMUI from "./pages/LoginPageMUI";
+import HeroExamplesPage from "./pages/HeroExamplesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/signup-mui" element={<SignupPageMUI />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/login-mui" element={<LoginPageMUI />} />
+          <Route path="/hero-examples" element={<HeroExamplesPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
