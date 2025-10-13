@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 
 const AnimatedProductShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const screenshots = ['/dashboard-view.png', '/leads-view.png'];
-  const labels = ['Dashboard View', 'Leads Management'];
+  const screenshots = ['/dashboard-view.png', '/leads-view.png', '/workflow-view.png'];
+  const labels = ['Dashboard View', 'Leads Management', 'Workflow Automation'];
 
   useEffect(() => {
     const interval = setInterval(() => {
