@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import DashboardPreview from "./DashboardPreview";
+import AnimatedProductShowcase from "./AnimatedProductShowcase";
 import MouseGradient from "./MouseGradient";
 const Hero = () => {
   return <section className="relative bg-primary text-white py-24 overflow-hidden" style={{
@@ -34,7 +34,7 @@ const Hero = () => {
 
         {/* Product Preview */}
         <div className="max-w-6xl mx-auto">
-          
+          <AnimatedProductShowcase />
         </div>
       </div>
     </section>;
