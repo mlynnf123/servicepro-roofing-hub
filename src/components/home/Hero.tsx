@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import AnimatedProductShowcase from "./AnimatedProductShowcase";
+import AnimatedProductDemo from "./AnimatedProductDemo";
 import MouseGradient from "./MouseGradient";
 const Hero = () => {
   return <section className="relative bg-background text-foreground py-24 overflow-hidden">
@@ -39,7 +39,7 @@ const Hero = () => {
 
         {/* Product Preview */}
         <div className="max-w-6xl mx-auto">
-          <AnimatedProductShowcase />
+          <AnimatedProductDemo />
         </div>
       </div>
     </section>;
